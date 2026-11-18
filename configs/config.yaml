@@ -1,0 +1,29 @@
+data:
+  ticker: "NVDA"
+  start: "2018-01-01"
+  end: "2026-11-17"
+  train_ratio: 0.70
+  val_ratio: 0.15
+
+features:
+  window: 30
+  rsi_period: 14
+  sma_period: 20
+  vol_period: 20
+
+model:
+  input_size: 6
+  hidden_size: 64
+  num_layers: 2
+  fc_size: 32
+  dropout: 0.2
+
+train:
+  seed: 42
+  batch_size: 64
+  epochs: 50
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 7
+  use_pos_weight: true
+  runs_dir: "runs"
